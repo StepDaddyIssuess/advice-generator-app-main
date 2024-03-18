@@ -1,0 +1,132 @@
+/* Reset */
+*, ::before, :after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ### Primary
+
+- Light Cyan: hsl(193, 38%, 86%)
+- Neon Green: hsl(150, 100%, 66%)
+
+### Neutral
+
+- Grayish Blue: hsl(217, 19%, 38%)
+- Dark Grayish Blue: hsl(217, 19%, 24%)
+- Dark Blue: hsl(218, 23%, 16%)
+
+## Typography
+
+### Body Copy
+
+- Font size (quote): 28px
+
+### Font
+
+- Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+- Weights: 800 */
+
+
+
+/* Variables */
+:root{
+/* Primary colors*/
+--color-light-cyan: hsl(193, 38%, 86%);
+--color-neon-green: hsl(150, 100%, 66%);
+
+/* Neutral colors */
+--color-grayish-blue: hsl(217, 19%, 38%);
+--color-dark-grayish-blue: hsl(217, 19%, 24%);
+--color-dark-blue: hsl(218, 23%, 16%);
+
+/* Fonts*/
+--font-size: 28px; 
+--font-family: "Manrope", sans-serif;
+--font-weight: 800;
+}
+
+/* body/Container styles*/
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--color-dark-blue);
+    font-family: var(--font-family);
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 40%;
+    max-width: 500px;
+    margin-block: auto;
+
+    background-color: var(--color-dark-grayish-blue);
+    border-radius: 15px;
+    margin-inline: 15px;
+}
+
+/* Titles / paragraph*/
+
+.title{
+    margin-block: 1.5rem;
+
+    color: var(--color-neon-green);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.advice-content{
+    max-width: 90%;
+    margin-inline: auto;
+    margin-bottom: 5rem;
+    font-size: var(--font-size);
+    color: var(--color-light-cyan);
+}
+
+/* icons / buttons*/
+
+.icon{
+    min-width: 90%;
+    min-height: 16px;
+    margin-bottom:3.5rem;
+
+    background-image: url(images/pattern-divider-mobile.svg);
+    background-position: center;
+}
+
+
+.dice{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 25px;
+    min-width: 40px;
+    max-width: 70px;
+
+    border-radius: 50%;
+    background-color: var(--color-neon-green);
+}
+
+.dice-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dice:hover{
+    cursor: pointer;
+    box-shadow:  0 0 0 .5em hsl(150, 100%, 66%, 30%),
+                 0 0 0 .5em hsl(150, 100%, 66%, 20%),
+                 0 0 0 1em hsl(150, 100%, 66%, 10%);
+}
